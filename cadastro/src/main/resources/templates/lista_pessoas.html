@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lista de Pessoas</title>
+</head>
+<body>
+<h1>Lista de Pessoas</h1>
+<a href="/pessoas/nova">Adicionar Nova Pessoa</a>
+<ul>
+    <li th:each="pessoa : ${pessoas}">
+        <span th:text="${pessoa.id}"></span> -
+        <span th:text="${pessoa.name}"></span> -
+        <span th:text="${pessoa.age}"></span> -
+        <span th:text="${pessoa.tel}"></span>
+    </li>
+</ul>
+</body>
+</html>

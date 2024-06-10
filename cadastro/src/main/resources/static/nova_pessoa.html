@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nova Pessoa</title>
+</head>
+<body>
+<h1>Adicionar Nova Pessoa</h1>
+<form action="#" th:action="@{/pessoas}" th:object="${pessoa}" method="post">
+    <div>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" th:field="*{name}">
+    </div>
+    <div>
+        <label for="age">Idade:</label>
+        <input type="text" id="age" th:field="*{age}">
+    </div>
+    <div>
+        <label for="tel">Telefone:</label>
+        <input type="text" id="tel" th:field="*{tel}">
+    </div>
+    <div>
+        <button type="submit">Salvar</button>
+    </div>
+</form>
+<a href="/pessoas">Voltar para a Lista</a>
+</body>
+</html>
